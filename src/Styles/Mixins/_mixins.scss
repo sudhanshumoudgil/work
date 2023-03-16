@@ -1,0 +1,44 @@
+@import "~include-media/dist/_include-media.scss";
+
+@mixin mobile {
+  @media (min-width: #{$mobileWidth}) {
+    @content;
+  }
+}
+
+@mixin largeMobile {
+  @media (min-width: #{$largeMobileWidth}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tabletWidth}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktopWidth}) {
+    @content;
+  }
+}
+
+@mixin largeDesktop {
+  @media (min-width: #{$largeDesktopWidth}) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin paragraphText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $bodyCopy;
+}

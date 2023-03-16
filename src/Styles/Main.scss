@@ -1,0 +1,67 @@
+@import "~normalize-scss/sass/_normalize.scss";
+@import "Base/_base";
+@import "Base/_typography";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  font-family: $rootFontFamily;
+  font-weight: 400;
+  color: $bodyCopy;
+}
+
+body {
+  -ms-overflow-style: auto; // IE 10+
+  scrollbar-width: none; // Firefox
+}
+
+.screentest * {
+  transition: none;
+  animation: none;
+}
+
+i, em{
+  font-style: italic;
+}
+
+#app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-wrapp {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.body {
+  @include media("<tablet") {
+    padding-right: 0;
+  }
+}
+
+.contentWrap{
+  padding: 0 20px;
+  @include media('>desktop'){
+    max-width: 1074px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

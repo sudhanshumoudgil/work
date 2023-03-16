@@ -1,0 +1,84 @@
+.brandFooter{
+  &__upperContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 36px 0;
+    font-size: $fontSize15;
+    line-height: $lineHeight20;
+    @include media('>phone'){
+      padding: 60px 0;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  &__sponsored{
+    p{
+      margin-bottom: 10px;
+      @include media('>phone'){
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__upperCopyright{
+    max-width: 420px;
+    margin-top: 36px;
+    @include media('>phone'){
+      margin-top: 0;
+    }
+    p{
+      margin-bottom: 16px;
+      @include media('>phone'){
+        margin-bottom: 11px;
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+  &__disclaimer{
+    padding: 34px 0 35px 0;
+    border-top: 1px solid $bdrColor;
+    font-size: $fontSize15;
+    line-height: $lineHeight21;
+  }
+  &__lower{
+    background: $bodyCopy;
+    color: $white;
+  }
+  &__lowerContent{
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: $fontSize14;
+    line-height: $lineHeight20;
+    font-weight: $fontWeightSemiBold;
+    @include media('>phone'){
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    @include media(">desktop"){
+      max-width: calc(#{$mainWrapperDesktop} - 80px);
+      margin: 0 auto;
+      padding: 18px 0;
+    }
+  }
+  &__links{
+    margin-bottom: 20px;
+    @include media('>phone'){
+        margin-bottom: 0;
+    }
+    a{
+      color: $white;
+      display: inline-block;
+      margin: 0 15px;
+      @include media('>phone'){
+        margin: 0;
+        margin-right: 30px;
+       }
+    }
+  }
+}

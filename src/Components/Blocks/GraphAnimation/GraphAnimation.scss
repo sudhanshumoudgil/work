@@ -1,0 +1,132 @@
+.animations-wrapper {
+  overflow: hidden;
+
+  @include media("<tablet") {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.animations-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.animations-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  &.animated {
+    opacity: 1;
+  }
+
+  &.relative {
+    position: relative;
+  }
+
+  .screentest & {
+    opacity: 1;
+  }
+}
+
+.animations-img {
+  width: 100%;
+  height: 100%;
+
+  @-moz-document url-prefix() {
+    vertical-align: text-top;
+  }
+
+  &--ie {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+
+    @include media("<=desktop") {
+      max-height: 400px;
+    }
+  }
+}
+
+.animations-item-mask {
+  overflow: hidden;
+  opacity: 1;
+
+  .animations-img {
+    transition: inherit;
+  }
+
+  &.fromLeft {
+    transform: translate3d(-100%, 0, 0);
+
+    .animations-img {
+      transform: translate3d(100%, 0, 0);
+    }
+
+    &.animated {
+      transform: translate3d(0, 0, 0);
+
+      .animations-img {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &.fromRight {
+    transform: translate3d(100%, 0, 0);
+
+    .animations-img {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    &.animated {
+      transform: translate3d(0, 0, 0);
+
+      .animations-img {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &.fromTop {
+    transform: translate3d(0, -100%, 0);
+
+    .animations-img {
+      transform: translate3d(0, 100%, 0);
+    }
+
+    &.animated {
+      transform: translate3d(0, 0, 0);
+
+      .animations-img {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &.fromBottom {
+    transform: translate3d(0, 100%, 0);
+
+    img {
+      transform: translate3d(0, -100%, 0);
+    }
+
+    &.animated {
+      transform: translate3d(0, 0, 0);
+
+      img {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
+
+.screentest .animations-img {
+  transition-delay: 0s !important;
+  transform: translate3d(0, 0, 0) !important;
+}

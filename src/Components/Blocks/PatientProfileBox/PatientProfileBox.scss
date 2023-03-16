@@ -1,0 +1,112 @@
+.patientProfile {
+    background: url('../../../Assets/Img/Hero-Landing.png') no-repeat 0 0;
+    background-size: cover;
+    h2{
+      padding: 70px 0 60px 0;
+      text-align: center;
+      color: $darkBlue;
+      font-size: $fontSize44;
+      line-height: $lineHeight53;
+      font-weight: $fontWeightSemiBold;
+      @include media('>phone'){
+          font-size: $fontSize48;
+          line-height: $lineHeight48;    
+      }
+    }
+    &__boxes{
+      display: flex;
+      padding: 0;
+      align-items: center;
+      flex-direction: column;
+      @include media('>phone'){
+            flex-direction: row;   
+            padding: 0 0 60px 0;
+            gap: 48px;
+            justify-content: center;
+        }
+    }
+    &__box{
+        max-width: 380px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;        
+        background: $white;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.33);
+        border-radius: 10px;
+        margin-bottom: 40px;
+        img{
+            border-radius: 10px 10px 0 0;
+            display: block;
+            max-width: 100%;
+        }
+        @include media('>phone'){
+            margin: 0;
+        }
+    }
+    &__image{
+        position: relative;
+        &:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 55px;
+            background: linear-gradient(180deg, rgba(0, 143, 180, 0) 0%, #008FB4 100%);
+        }
+        span{
+            position: absolute;
+            bottom: 8px;
+            right: 13px;
+            z-index: 9;
+            font-size: $fontSize12;
+            line-height: $lineHeight16;
+            color: $white;
+            text-shadow: 0px 2px 8px rgba(0, 59, 92, 0.22);
+        }
+    }
+    &__info{
+        padding: 32px 0 38px 0;
+        h3{
+            font-size: $fontSize32;
+            line-height: $lineHeight38;
+            font-weight: $fontWeightSemiBold;
+            color: $darkBlue;
+        }
+        p{
+            padding: 5px 0 24px 0;
+            font-size: $fontSize20;
+            line-height: $lineHeight23;
+        }
+        a{
+            display: inline-block;
+            width: 234px;
+            height: 43px;
+            line-height: 43px;
+            border-radius: 20px;
+            background: $primaryColor;
+            color: $white;
+            text-decoration: none;
+            transition: all .5s ease;
+            font-size: $fontSize19;
+            font-weight: $fontWeightSemiBold;
+            &:hover{
+                background: $darkBlue;
+            }
+        }
+    }
+    &__footnote{
+      display: flex;
+      justify-content: space-between;
+      font-size: $fontSize12;
+      line-height: $lineHeight16;
+      padding-bottom: 20px;
+      color: $darkBlue;
+      flex-direction: column;
+      @include media('>phone'){
+           flex-direction: row;
+        }
+    }
+  }

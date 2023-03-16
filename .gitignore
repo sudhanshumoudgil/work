@@ -1,0 +1,27 @@
+.DS_Store
+node_modules
+/dist
+/tools/screenshots/output
+/dev_assets
+package-lock.json
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+/bi_gilotrif_patient.iml
+/validus_equetro_ff_do.iml

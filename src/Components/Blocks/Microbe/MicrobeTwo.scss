@@ -1,0 +1,42 @@
+.microbe-2 {
+    position: absolute;
+    left: auto;
+    bottom: 0;
+    right: -150px;
+    top: 30px;
+    width: 430px;
+    height: 390px;
+    overflow: visible;
+  
+    @include media(">xlargeDesktop") {
+      right: -400px;
+    }
+    @include media("<=1200px") {
+      width: 430px;
+      height: 390px;
+      right: -150px;
+    }
+    @include media("<=1100px") {
+      width: 400px;
+      height: 363px;
+      right: -120px;
+      top: 40px;
+    }
+    @include media("<tablet") {
+      width: 313px;
+      height: 280px;
+      margin: 0 auto;
+      left: 250px;
+      top: 0;
+    }
+    @include media("<phone") {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 313px;
+      height: 280px;
+      margin: 40px 0;
+    }
+  }

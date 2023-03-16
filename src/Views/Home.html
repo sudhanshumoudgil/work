@@ -1,0 +1,6 @@
+<div class="home">
+  <transition name="fade" mode="out-in">
+    <div ref="overlay" class="overlay no_parent_scroll" v-show="isActiveOverlay"></div>
+  </transition>
+  <PatientProfileBox :ProfileBox="ProfileBox"/>
+</div>

@@ -1,0 +1,333 @@
+.isi {
+  &.isi-static{
+    max-width: 1074px;
+    height: auto;
+    max-height: 100%;
+    @include media("<=tablet") {
+      padding: 0 20px;
+      padding-top: 20px;
+    }
+  }
+  font-size: 16px;
+  line-height: 1.5;
+  position: fixed;
+  bottom: 0;
+  background-color: $white;
+  height: 33vh;
+  max-height: 326px;
+  z-index: 101;
+  opacity: 1;
+  transition: all 0.3s;
+  margin: 0 auto;
+  width: 100%;
+  
+  @include media("<tablet") {
+    // transition: height 0.3s;
+    height: 25vh;
+    max-height: 250px;
+    padding-bottom: 0;
+    
+  }
+
+  &__content {
+    h3 {
+      font-weight: $fontWeightSemiBold;
+      font-size: 20px;
+      line-height: 34px;
+      color: $primaryColor;
+      text-transform: uppercase;
+      margin: 0 0 4px;
+    }
+
+    h5 {
+      font-weight: $fontWeightSemiBold;
+      margin-bottom: 10px;
+      font-size: $fontSize16;
+      line-height: $lineHeight20;
+    }
+
+    p {
+      margin-bottom: 17px;
+      a{
+        color: $primaryColor;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      u{
+      font-size: $fontSize16;
+      line-height: $lineHeight20;
+      text-underline-offset: 4px;
+        @include media("<phone"){
+          font-size: $fontSize16;
+          line-height: $lineHeight20;
+        }
+      }
+      i{
+        font-size: $fontSize16;
+        line-height: $lineHeight20;
+        @include media("<phone"){
+          font-size: $fontSize16;
+          line-height: $lineHeight20;
+        }
+      }
+    }
+
+    .list {
+      padding: 0 0 12px 8px;
+      li {
+        padding: 0 0 8px 15px;
+
+        &:before {
+          top: 8px;
+        }
+      }
+    }
+
+    .footNote {
+      padding: 43px 0 60px 0;
+      @include media("<phone"){
+        padding-bottom: 20px;
+      }
+      span {
+        color: $primaryColor;
+        font-weight: $fontWeightSemiBold;
+      }
+    }
+  }
+
+
+  &-top,
+  &-bottom {
+    scrollbar-face-color: $primaryColor;
+    scrollbar-shadow-color: $primaryColor;
+    scrollbar-track-color: $white;
+    scrollbar-arrow-color: $primaryColor;
+    width: 100%;
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $primaryColor;
+    }
+  }
+
+  &-top {
+    max-height: 104px;
+    height: 25vh;
+    overflow: hidden;
+    @include media("<phone"){
+      max-height: 94px;
+    }
+  }
+
+  &-bottom {
+    max-height: 150px;
+
+    @media (min-width: 1025px) {
+      max-height: 182px;
+      height: 20vh;
+    }
+
+    @media all and (-ms-high-contrast: none) {
+      .ie-last-text {
+        margin-bottom: 50px;
+        display: block;
+      }
+    }
+  }
+
+  .isi__expand-button {
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    transition: all 0.2s ease;
+    background-color: $white;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    border-radius: 50% 0 0 50%;
+
+    .isIE & {
+      right: 18px;
+    }
+
+    @include media("<tablet") {
+      right: 10px;
+      height: 35px;
+      top: 6px;
+    }
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 2px;
+      border-radius: 999px;
+      background-color: $black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all ease 0.2s;
+    }
+
+    &::after {
+      content: "";
+      width: 2px;
+      height: 16px;
+      border-radius: 999px;
+      background-color: $black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      @media screen and (min-width: 1200px) {
+        &::before,
+        &::after {
+          background-color: $primaryColor;
+        }
+      }
+    }
+  }
+
+  .container__wrapper {
+    background-color: $white;
+    position: relative;
+    padding: 0 20px;
+
+    @include media(">desktop") {
+      max-width: 1074px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  &-static {
+    position: static;
+    width: 100%;
+    height: auto;    
+    padding: 0;
+    .container__wrapper{
+      padding: 10px 0;
+    }
+
+    .isi-top {
+      height: auto;
+      max-height: 100%;
+      overflow: auto;
+      border-top: 0;
+      &.container__wrapper{
+        padding-bottom: 0;
+      }
+    }
+
+    .isi-bottom {
+      height: auto;
+      max-height: 100%;
+      overflow: auto;
+      border-top: 0;
+      &.container__wrapper{
+        padding: 0;
+      }
+    }
+    
+  }
+
+  &-hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &-opened {
+    height: 83vh;
+     max-height: 100%;
+    padding-bottom: 0;
+    z-index: 9999;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 1px;
+    }
+
+    @include media("<tablet") {
+      height: calc(100% - 90px);
+      top: auto;
+    }
+
+    .isi-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      scrollbar-face-color: $primaryColor;
+      scrollbar-shadow-color: $primaryColor;
+      scrollbar-track-color: $white;
+      scrollbar-arrow-color: $primaryColor;
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: $white;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: $white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: $primaryColor;
+      }
+    }
+    .isi-top,
+    .isi-bottom {
+      height: auto;
+      max-height: 100%;
+      overflow: visible;
+
+      .isIE & {
+        max-height: 200px;
+      }
+    }
+    .isi-top{
+      padding-bottom: 0;
+    }
+    .isi-bottom{
+      border-top: none;
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+    .isi__expand-button {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &-opened-menu {
+    z-index: 100;
+  }
+}

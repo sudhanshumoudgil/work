@@ -1,0 +1,90 @@
+.popup-container {
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px);
+    max-width: 565px;
+    background: $white;
+    z-index: 99999;
+
+    &__close {
+        position: absolute;
+        top: 24px;
+        right: 31px;
+        color: $red;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+
+        @include media("<=phone") {
+            display: block;
+            text-align: center;
+        }
+
+        button {
+            border-radius: 25px;
+            background: $darkRed;
+            color: $white;
+            padding: 15px 27px;
+            min-width: 79px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            border: solid 2px $darkRed;
+
+            &+button {
+                margin-left: 27px;
+            }
+
+            &:hover,
+            &.active {
+                background: $white;
+                color: $red;
+            }
+        }
+    }
+
+    &__response {
+        padding-left: 27px;
+        font-weight: 700;
+        color: $red;
+
+        @include media("<=phone") {
+            padding-left: 0;
+            padding-top: 15px;
+        }
+    }
+}
+
+.popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+
+
+.popup-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    position: relative;
+    z-index: 99999;
+}
+
+.popup-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+}

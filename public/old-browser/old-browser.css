@@ -1,0 +1,100 @@
+.old-browser {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 11;
+  }
+
+  .old-browser__window {
+    width: 800px;
+    margin: 160px auto 0;
+    text-align: center;
+    color: #382f2d;
+    background-color: #fff;
+  }
+
+  .old-browser__message {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .old-browser__comment {
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+
+  .old-browser__icons {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    font-size: 0;
+  }
+
+  .old-browser__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    padding-top: 150px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  .old-browser__icon i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    backface-visibility: hidden;
+    transition: opacity 0.2s;
+  }
+
+  .old-browser__icon--chrome i {
+    background-image: url(browser-chrome.png);
+  }
+
+  .old-browser__icon--edge i {
+    background-image: url(browser-edge.png);
+  }
+
+  .old-browser__icon--firefox i {
+    background-image: url(browser-firefox.png);
+  }
+
+  .old-browser__icon--safari i {
+    background-image: url(browser-safari.png);
+  }
+
+  .old-browser__icon:hover {
+    color: #000;
+  }
+
+  .old-browser__icon:hover i {
+    opacity: 0.8;
+  }
+
+  .preloader-img {
+    width: 225px;
+    height: auto;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .preloader-img svg {
+    width: 100%;
+    height: auto;
+  }

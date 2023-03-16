@@ -1,0 +1,70 @@
+@import url('Popup.scss');
+
+.popup-container-login {
+  top: 16% !important;
+  box-shadow: 1px 8px 17px 0px rgba(0, 0, 0, 0.27);
+  max-width: 316px !important;
+  border-radius: 8px;
+}
+
+.popupOverlay_login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+
+.buttons {
+  display: block;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin: 20px 2px 2px 2px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #3072ab;
+  border-color: #3072ab;
+  color: white;
+}
+
+.btn-cancel {
+  border-color: cornsilk;
+}
+
+.login-box {
+  padding: 20px 20px 0px;
+}
+
+.label {
+  font-size: 14px;
+  width: 100px;
+}
+
+.link-text {
+  font-size: 13px;
+  margin: 5px 0px;
+}
+
+#username,
+#password {
+  padding: 5px;
+  border-color: #d2cdcd;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.username-field,
+.password-field {
+  display: flex;
+  align-items: center;
+}

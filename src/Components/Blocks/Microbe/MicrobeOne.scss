@@ -1,0 +1,39 @@
+.microbe-1 {
+    width: 520px !important;
+    height: 537px !important;
+    @include media("<=1265px") {
+      width: 450px !important;
+      height: 465px !important;
+    }
+    @include media("<=1140px") {
+      width: 400px !important;
+      height: 413px !important;
+    }
+    @include media("<=tablet") {
+      width: 370px !important;
+      height: 382px !important;
+    }
+    @include media("<phone") {
+      width: initial !important;
+    }
+    @include media("<=460px") {
+      width: 100% !important;
+    }
+    @include media("<=375px") {
+      overflow: visible;
+    }
+  }
+  
+  .microbe-05 {
+    display: block;
+    @include media("<=375px") {
+      display: none;
+    }
+  }
+  
+  .microbe-05-mob {
+    display: none;
+    @include media("<=375px") {
+      display: block;
+    }
+  }

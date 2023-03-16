@@ -1,0 +1,60 @@
+$breakpoints: (
+  "iphonePhone": 391px,  
+  "bigTablet": 1200px,
+  "smallDesktop": 1366px,  
+  "mediumDesktop": 1440px,
+  "largeDesktop": 1600px,  
+  
+  "verySmallPhone" : 390px,
+  "smallPhone": 575px,
+  "phone": 768px,
+  "tablet": 1024px,
+  "desktop": 1366px,
+  "xlargeDesktop": 1920px,
+  "extralargeDesktop": 2560px,
+);
+
+$rootFontFamily:'Barlow', sans-serif;
+$mainWrapperDesktop: 1440px;
+
+$fontWeightLight:300;
+$fontWeightNormal:400;
+$fontWeightSemiBold:600;
+$fontWeightSemiBold1:500;
+$fontWeightBold:700;
+$fontWeightMediumBold:800;
+$fontWeightExtraBold:900;
+
+$fontSize10: 10px;
+$fontSize12:12px;
+$fontSize14:14px;
+$fontSize15:15px;
+$fontSize16:16px;
+$fontSize18:18px;
+$fontSize19:19px;
+$fontSize20:20px;
+$fontSize24:24px;
+$fontSize32:32px;
+$fontSize36:36px;
+$fontSize44:44px;
+$fontSize48:48px;
+
+$lineHeight16: 16px;
+$lineHeight17: 17px;
+$lineHeight20: 20px;
+$lineHeight21: 21px;
+$lineHeight23: 23px;
+$lineHeight24: 24px;
+$lineHeight29: 29px;
+$lineHeight38: 38px;
+$lineHeight48: 48px;
+$lineHeight53: 53px;
+
+$primaryColor:#008FB4;
+$white:#ffffff;
+$black: #000000;
+$red: #F26322;
+$darkBlue:#003B5C;
+$bodyCopy: #444444;
+$bdrColor: #DDDDDD;
+
