@@ -1,19 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-pipeline {
-    agent any
-    stages {
         stage('deploy') {
             steps {
               sh "aws configure set region us-east-2" 
